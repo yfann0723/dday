@@ -33,8 +33,7 @@ my $version="V1.4";
 # example: muquit|fhy687kq1hger|/usr/local/web/upload/muquit
 # if no path is specified, the file must be located in the cgi-bin directory.
 
-my $g_upload_db="upload.db";
-my $ip_addr = "75.51.145.73";
+my $g_upload_db="./upload.db";
 
 # overwrite the existing file or not. Default is to overwrite
 # chanage the value to 0 if you do not want to overwrite an existing file.
