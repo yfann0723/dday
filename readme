@@ -1,0 +1,6 @@
+* /usr/lib/cgi-bin
+  * make_cgi_cmd.csh
+  * update upload_top.pl to include cgi_cmd_<process>.pl
+  * create a <process>_usage in /usr/local/web/upload/yfann/usage
+  * move <process>.gen.pl to /usr/local/web/upload/yfann/<process>
+* /usr/local/web/upload/yfann

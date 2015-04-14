@@ -1,0 +1,6 @@
+
+  word_rotator_usage: 
+-h             -> help menu which list all options.
+-design        -> design name.
+-num_word      -> number of words to be rotated.
+-word_size     -> size of a word.

@@ -1,0 +1,21 @@
+
+  arb_usage:
+  -h           -> help menu which list all optinos.
+  -name        -> a design ex <name>_rr_arb_4.v will be generated.
+  -ip_ack_enb  -> added an ack_enb input. With this option, a new winner will be selected only if this input is set.
+  -op_ack_num  -> in addition to ack, decoded ack is also output.
+  -op_ack_1b   -> in addition to ack, print 1-bit summary to output.
+  -op_flop     -> add flop to both ack and ack_num. There is a cycle latency between req and ack.
+  -op_data_mux -> will generate a data mux output from all data inputs.
+                 be generated in wrr & wspe design.
+  -size        -> define number of requests.
+  -type        -> default is spe. can be "rr" if round-robin arbiter is desired.
+  -weight      -> wrr/wspe design is generated if the option is set.
+  -arb_ip_sel  -> this option will generate a smaller but a long timing design (has one arbiter with input mux).
+  e.g. perl arb.gen.pl -name test -size 8 -type rr -weight. This will generate the following designs
+       test_spe_8.v, test_rr_arb_8.v test_wrr_arb_8.v
+  e.g. perl arb.gen.pl -name test -size 4 -weight. This will generate the following designs
+       test_spe_4.v, test_wspe_arb_4.v
+         
+  Notes: - The suggested maximum number of size is less than 32.
+ 
